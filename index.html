@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DYNAMIC-WEBSITE</title>
+</head>
+<body>
+    <div id="hero">
+        <div class="navbar">
+        <img src="./Radiance_img/logo.png" alt="" class="logo">
+        <div class="user">
+            <button type="button">Explore</button>
+            <img src="./Radiance_img/user.png" alt="">
+        </div>
+    </div>
+    <div class="cont">
+        <div class="info">
+            <h1>DISCOVER</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed fuga soluta minus, omnis vel sit ab? Iusto exercitationem  br<br>omnis repellat unde vero similique.</p>
+            <hr>
+            <input type="text" placeholder="Search">
+        </div>
+       
+    </div>
+    <div class="slider">
+        <img src="./Radiance_img/left-arrow.png" alt="left arrow" id="prev">
+        <div class="preview">
+            <img src="./Radiance_img/small1.png" alt="small img " class=" active thumbnail">
+            <img src="./Radiance_img/small2.png" alt="small img " class="thumbnail">
+            <img src="./Radiance_img/small3.png" alt="small img " class="thumbnail">
+            <img src="./Radiance_img/small4.png" alt="small img " class="thumbnail">
+            <img src="./Radiance_img/small5.png" alt="small img " class="thumbnail">
+        </div>
+        <img src="./Radiance_img/right-arrow.png" alt="right arrow" id="next">
+    </div>
+    </div>
+    <script>
+        let prev = document.getElementById("prev");
+        let next = document.getElementById("next");
+        let thumbnail = document.getElementsByClassName("thumbnail");
+        let hero =document.getElementById("hero");
+        
+        backgroundimg = new Array(
+            "Radiance_img/bg1.png",
+            "Radiance_img/bg2.png",
+            "Radiance_img/bg3.png",
+            "Radiance_img/bg4.png",
+            "Radiance_img/bg5.png",
+        );
+        let i = 0;
+        next.onclick = function(){
+            if (i < 4){
+            hero.style.backgroundImage = 'url("'+backgroundimg[i+1]+'")';
+            thumbnail[i+1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+
+            i++;
+            }
+          
+        }
+        prev.onclick = function(){
+            if (i > 0){
+            hero.style.backgroundImage = 'url("'+backgroundimg[i-1]+'")';
+            thumbnail[i-1].classList.add("active");
+            thumbnail[i].classList.remove("active");
+            i--;
+            }
+          
+        }
+
+    </script>
+</body>
+</html>

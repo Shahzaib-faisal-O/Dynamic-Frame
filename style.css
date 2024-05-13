@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hero{
+    width: 100%;
+    height: 100vh;
+background-image: url("./Radiance_img/bg1.png");
+background-size: cover;
+background-position: center;
+position: relative;
+}
+.navbar{
+width: 90%;
+margin: auto;
+display:flex;
+align-items: center;
+justify-content: space-between;
+position: relative;
+z-index: 10;
+}
+.navbar .logo{
+    width: 60px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 50px; 
+    cursor: pointer;
+}
+button{
+    padding: 8px 25px;
+    /* background-image: linear-gradient(45deg,#0b6192,#0a8574); */
+    background: transparent;
+    outline:none;
+    border: 2px solid white;
+    border-bottom-left-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    color:#000;
+    transform: scale(1.2);
+   /* border-bottom-right-radius: 30px; */
+   border-top-left-radius: 20px ;
+}
+.cont{
+    width:50%;
+    height: 100vh;
+    background:rgba(86, 86,86, 0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.info {
+    width: 550px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.info h1{
+letter-spacing: 1.2rem;
+font-size: 61px;
+}
+.info p{
+    color: #f0eef1;
+    font-size: 11px;
+    margin: 20px 0 ;
+    line-height: 12px;
+}
+.info hr {
+width: 50%;
+height: 1vh;
+color: black;
+background: transparent;
+}
+.info input{
+    width: 50%;
+    padding: 10px 15px ;
+    margin: 12px 0 ;
+    outline: navajowhite;
+    border: 3px solid #fff;
+    border-radius: 21px ;
+    background: transparent;
+    color: #fff;
+    font-size: 13px;
+}
+::placeholder{
+    color: #ccc;
+    text-align: center;
+    font-weight: bold;
+}
+.slider{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+}
+
+#prev, #next{
+width: 20px;
+cursor: pointer;
+}
+.preview{
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+.preview img {
+    width: 60px;
+    margin: 0 10px;
+    opacity: 0.4px;
+}
+.preview .active{
+    display: block;
+    border: 3px solid rgb(0, 0, 0);
+    width: 100px;
+    opacity: 1;
+}
